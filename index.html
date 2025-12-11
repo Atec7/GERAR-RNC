@@ -90,7 +90,7 @@ tr:hover td{background:rgba(0,0,0,.02)}
   <button class="btn" id="btnExportCsv">Exportar CSV</button>
   <button class="btn" id="btnBackup">Backup JSON</button>
   <button class="btn" id="btnRestore">Restaurar JSON</button>
-  <!--<button class="btn warning" id="btnLimpar">Limpar Tudo</button>-->
+  <button class="btn warning" id="btnLimpar">Limpar Tudo</button>
 </div>
 
 <form id="form" class="card">
@@ -280,7 +280,7 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btnExportCsv').addEventListener('click', exportCSV);
   document.getElementById('btnBackup').addEventListener('click', backupJSON);
   document.getElementById('btnRestore').addEventListener('click', restoreJSON);
-  document.getElementById('btnLimpar').addEventListener('click', limparTudo);
+  //document.getElementById('btnLimpar').addEventListener('click', limparTudo); *ajustado para evitar erro em massa do lucas
 
   els.busca.addEventListener('input', () => { saveLS('busca', els.busca.value); render(); });
   [els.dataInicio, els.dataFim].forEach(i => i.addEventListener('input', () => { saveLS(i.id, i.value); render(); }));
